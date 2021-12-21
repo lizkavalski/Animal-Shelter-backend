@@ -1,0 +1,20 @@
+{
+  "name": "animal-shelter-backend",
+  "version": "1.0.0",
+  "description": "This the backend of website called Code Animal Shelter base on a UX/UI Case study. This website will be using Node.js and SQL.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizkavalski/Animal-Shelter-backend.git"
+  },
+  "author": "Liz Kavalski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizkavalski/Animal-Shelter-backend/issues"
+  },
+  "homepage": "https://github.com/lizkavalski/Animal-Shelter-backend#readme"
+}
