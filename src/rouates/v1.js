@@ -29,22 +29,24 @@ async function handleGetAll(req, res) {
 async function handleGetOne(req, res) {
   const id = req.params.id;
   let theRecord = await req.model.get(id)
-  res.status(200).json(theRecord);
+  let message ={message:'"Magic Mirror on the wall, who is the fairest one of all?”- Queen (Snow White and the Seven Drawfs)', theRecord}
+  res.status(200).json(message);
 }
 
 async function handleCreate(req, res) {
   let obj = req.body;
   let newRecord = await req.model.create(obj);
-  let message = {message:'"“Bbippity boppity boo.”- Fairy Godmother (Cinderella.)'}
+  let message = {message:'"“bippity boppity boo.”- Fairy Godmother (Cinderella.)', newRecord}
 
-  res.status(201).json(newRecord);
+  res.status(201).json(message);
 }
 
 async function handleUpdate(req, res) {
   const id = req.params.id;
   const obj = req.body;
   let updatedRecord = await req.model.update(id, obj)
-  res.status(200).json(updatedRecord);
+  let message ={message:"“Hockety pockety wockety wack! Odds and ends and bric-a-brac!”- Merlin(The Sword in the Stone", updatedRecord}
+  res.status(200).json(message);
 }
 
 async function handleDelete(req, res) {
