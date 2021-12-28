@@ -45,13 +45,14 @@ async function handleUpdate(req, res) {
   const id = req.params.id;
   const obj = req.body;
   let updatedRecord = await req.model.update(id, obj)
-  let message ={message:"“Hockety pockety wockety wack! Odds and ends and bric-a-brac!”- Merlin(The Sword in the Stone", updatedRecord}
+  let message ={message:"“Hockety pockety wockety wack! Odds and ends and bric-a-brac!”- Merlin(The Sword in the Stone)", updatedRecord}
   res.status(200).json(message);
 }
 
 async function handleDelete(req, res) {
   let id = req.params.id;
   let deletedRecord = await req.model.delete(id);
+  let message = { message:'"Danger Will Robinson"--Robot (Lost in Space)', deletedRecord}
   res.status(200).json(deletedRecord);
 }
 
