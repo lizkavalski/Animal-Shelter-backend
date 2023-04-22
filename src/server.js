@@ -15,9 +15,9 @@ app.use(express.json());
 
 // app.use(logger);
 
-// app.use(authRouates);
+app.use(authRouates);
 app.use('/v1', v1rouates);
-// app.use('/v2', v2rouates);
+app.use('/v2', v2rouates);
 app.use('*', notFound);
 app.use(oops);
 
